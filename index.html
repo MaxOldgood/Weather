@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main-container">
+            <div class="search-bar-container">
+                <form id="search-bar-form">
+                    <input type="search" id="search-bar-input" placeholder="Enter city name">
+                    <input type="image" id="search-icon" src="./img/search.svg">
+                </form>
+            </div>
+            <div class="content">
+                <div class="tabs-container">
+                    <input type="radio" id="now-button" name="tab-buttons" class="tab-button" checked="checked">
+                    <label for="now-button">Now</label>
+                    <div id="now-tab" class="tab-content">
+                        <div class="degrees-output"></div>
+                        <div class="weather-icon-output">
+                            <img id="weather-icon">
+                        </div>
+                        <div class="city-output" id="current-city"></div>
+                        <input type="image" id="save-city-button" src="./img/heart-icon.svg">
+                    </div>
+
+                    <input type="radio" id="details-button" name="tab-buttons" class="tab-button">
+                    <label for="details-button">Details</label>
+                    <div id="details-tab" class="tab-content">
+                        <p id="details-city-name" class="city-output"></p>
+                        <div>
+                            <ul class="details-content">
+                                <li>Temperature: <span class="degrees-output"></span></li>
+                                <li>Feels like: <span class="feels-like-output"></span></li>
+                                <li>Weather: <span class="weather-output"></span></li>
+                                <li>Sunrise: <span class="sunrise-output"></span></li>
+                                <li>Sunset: <span class="sunset-output"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <input type="radio" id="forecast-button" name="tab-buttons" class="tab-button">
+                    <label for="forecast-button">Forecast</label>
+                    <div id="forecast-tab" class="tab-content">
+                        <p id="forecast-city-name" class="city-output">Actobe</p>
+                        <div class="forecast-container">
+                          <template id="forecast-template">
+                            <div class="forecast-element">
+                                <div class="forecast-date">
+                                    <span class="forecast-date-output"></span>
+                                </div>
+                                <div class="forecast-time">
+                                    <span class="forecast-time-output"></span>
+                                </div>
+                                <div class="forecast-temperature">
+                                    Temperature: <span class="forecast-degrees-output"></span>&#176
+                                    <br>
+                                    Feels like: <span class="forecast-feels-degrees-output"></span>&#176
+                                </div>
+                                <div class="forecast-weather">
+                                    <span class="forecast-weather-output"></span>
+                                </div>
+                                <div class="forecast-icon-container">
+                                    <img class="forecast-icon">
+                                </div>
+                            </div>
+                          </template>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="added-locations-container">
+                    <div class="added-locations-name">
+                        <p>Added Locations:</p>
+                    </div>
+                    <div class="added-locations-city-list">
+                        <ul id="saved-cities-list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+<script type="module" src="main1.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.wrapper {
+    width: 621px;
+    height: 462px;
+}
+
+.main-container {
+    width: 600px;
+    height: 435px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+}
+
+/* Style Search Bar */
+
+.search-bar-container {
+    width: 599;
+    height: 45px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000000;
+}
+
+#search-bar-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+#search-bar-input {
+    height: 21px;   
+    box-sizing: border-box;
+    margin-left: 16px;
+    margin-top: 11px;
+    border: none;
+    outline: none;
+}
+
+#search-bar-input, .tab-button {
+    font-size: 18px;
+}
+
+#search-icon{
+    margin-top: 7px;
+    margin-right: 17px;
+}
+
+/*  */
+
+.content {
+    width: 600px;
+    height: 390px;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.tabs-container {
+    width: 300px;
+    height: 390px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tab-content {
+    min-width: 300px;
+    height: 345px;
+    box-sizing: border-box;
+    display: none;
+    order: 1;
+}
+
+/* Style "Now" Tab  */
+
+#now-tab .degrees-output {
+    font-size: 70px;
+    position: absolute;
+    top: 20px;
+    left: 23px;
+}
+
+.weather-icon-output {
+    position: absolute;
+    top: 143px;
+    left: 100px;
+}
+
+.city-output {
+    position: absolute;
+    top: 300px;
+    left: 12px;
+    width: 230px;
+    word-wrap: break-word;
+}
+
+#save-city-button {
+    width: 24px;
+    height: 25px;
+    border: none;
+
+    position: absolute;
+    top: 300px;
+    left: 250px;
+}
+
+/* Style "Details" Tab */
+
+#details-city-name {
+    position: absolute;
+    left: 18px;
+    top: 33px;
+    margin: 0px;
+}
+
+#details-tab div {
+    position: absolute;
+    left: 15px;
+    top: 103px;
+}
+
+#details-tab ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#details-tab ul li {
+    margin-bottom: 13px;
+}
+
+/* Style "Forecast" Tab */
+
+#forecast-city-name {
+    position: absolute;
+    left: 18px;
+    top: 33px;
+    margin: 0px;
+}
+
+.forecast-container {
+    width: 275px;
+    position: absolute;
+    top: 68px;
+    left: 18px;
+    height: 277px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+.forecast-container::-webkit-scrollbar {
+    display: none;
+}
+
+.forecast-element {
+    width: 265px;
+    height: 120px;
+    border: 1px solid black;
+    margin-bottom: 9px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.forecast-date,
+.forecast-time, 
+.forecast-temperature,
+.forecast-weather,
+.forecast-icon {
+    font-size: 18px;
+    position: absolute;
+}
+
+.forecast-date {
+    top: 6px;
+    left: 8px;
+}
+
+.forecast-time {
+    top: 6px;
+    right: 12px;
+}
+
+.forecast-temperature {
+    left: 10px;
+    bottom: 13px;
+}
+
+.forecast-weather {
+    top: 61px;
+    right: 10px;
+}
+
+.forecast-icon {
+    width: 31px;
+    height: 31px;
+    right: 13px;
+    bottom: 9px;
+}
+
+/* Style tabs stripe */
+
+.tabs-container label {
+    width: 100px;
+    height: 44px;
+    border: 1px solid #000000; 
+    border-right: none;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+
+    font-size: 18px;
+    text-align: center;
+    line-height: 44px;
+
+    order: 2;
+}
+
+.tabs-container label:first-of-type {
+    border-left: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label + .tab-content {
+    display: block;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* Style Added Locations Block */
+
+.added-locations-container {
+    width: 300px;
+    height: 388px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 300px;
+    top: 0px;
+    border-left: 1px solid #000000;
+}
+
+.added-locations-name {
+    width: 298px;
+    height: 68px;
+    border-bottom: 1px solid #000000;
+    box-sizing: border-box;
+    position: absolute;
+    left: -1px;
+}
+
+.added-locations-name > p {
+    margin: 0px;
+    position: absolute;
+    top: 33px;
+    left: 18px;
+}
+
+.added-locations-city-list {
+    width: 297px;
+    height: 320px;
+    position: absolute;
+    top: 68px;
+    overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.added-locations-city-list::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.added-locations-city-list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.added-locations-city-list ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.added-locations-city-list li {
+    margin-bottom: 13px;
+}
+
+#saved-cities-list {
+    width: 250px;
+}
+
+#saved-cities-list li {
+    display: flex;
+    justify-content: space-between;
+}
